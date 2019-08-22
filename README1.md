@@ -124,7 +124,7 @@ export default function (xpath) {
 ```text
 1) The specified selector does not match any element in the DOM tree.
 
-   Browser: Firefox 59.0.0 / Mac OS X 10.12.0
+   Browser: Chrome 76.0.3809 / Windows 10.0.0
    Screenshot: /Users/HDO/VSCodeProjects/testcafe-starter/screenshots/2018-05-07_10-39-08/test-2/Firefox_59.0.0_Mac_OS_X_10.12.0/errors/1.png
 
       13 |
@@ -195,6 +195,10 @@ export default function (xpath) {
 ## Screenshot rendering
 
 - this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.
+
+## Logger rendering
+
+- this logger embeds all information about the execution as a html report, making the generated html file completely autonomous.
 
 ## Contributors
 
