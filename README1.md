@@ -10,14 +10,14 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 
 ## To install this TestCafe Reporter
 
-- run the command `npm install --save testcafe-reporter-cucumber-json`.
+- run the command `npm i keyword_driven`.
 
 ## Usage
 
 - add to the testcafe command-line the following options:
 
 ```sh
-testcafe chrome ./path-to-tests/*(.js|.testcafe|.ts) --reporter cucumber-json:reports/report.json --reporter-app-name='My App' --reporter-app-version='x.y.z'
+testcafe chrome ./path-to-tests/*(.js)'
 ```
 
 ## To generate the HTML report
