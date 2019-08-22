@@ -103,13 +103,13 @@ export default function (xpath) {
 
 ## Utility
 
-- `testcafe` enables to execute the keyword-driven solution;
-- `xlsx` enables to read the excel file with data dynamically from the path:
-- `xpath-selector.js` enables to access the xpath
+- `testcafe` enables to execute the keyword-Driven solution.
+- `xlsx` enables to read the excel file with data dynamically from the ./path-to-tests/*(.xlsx).
+- `xpath-selector.js` enables to access the xpath(LocatorValue).
 
 ## Error rendering
 
-- this execution will report for each file reported in the stack trace
+- this execution will report for each file reported in the stack trace.
 
 ```
 C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
