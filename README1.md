@@ -47,10 +47,8 @@ var XLSX = require('xlsx')
     test('Keyword-Driven',  async t => {
         await t.maximizeWindow()
         .pressKey('home right . ctrl + shift + J')
-        // xlData.forEach(element => {
         for (let i = 0; i < xlData.length; i++) {
             let element = xlData[i]
-            //[element.Keyword](element.Parameter)
             switch (element.Keyword) {
                 case "navigateTo":
                     await t[element.Keyword](element.Parameter)
