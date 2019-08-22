@@ -1,88 +1,164 @@
-# Testcafe: Keyword-Driven framework
+# Keyword-Driven using TestCafe (beta)
 
-Testcafe Keyword Driven Framework is a type of Functional Automation Testing Framework which is also known as Table-Driven testing or Action Word based testing.
+This is the **Cucumber JSON** reporter plugin for [TestCafe](http://devexpress.github.io/testcafe).
 
-## Getting Started
+[![npm badge](https://miro.medium.com/max/1838/1*VjWsyasduivy_Hkr2LRq2A.png)](https://i.stack.imgur.com/Zno5Z.png)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This TestCafe reporter generates a json file that can be converted to a nice and searchable html report by using [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter).
 
-### Prerequisites
+![report-sample](media/report01.png)
 
-What things you need to install the software and how to install them
+## To install this TestCafe Reporter
 
-```
-Give examples
-```
+- run the command `npm install --save testcafe-reporter-cucumber-json`.
 
-### Installing
+## Usage
 
-A step by step series of examples that tell you how to get a development env running
+- add to the testcafe command-line the following options:
 
-Say what the step will be
-
-```
-Give the example
+```sh
+testcafe chrome ./path-to-tests/*(.js|.testcafe|.ts) --reporter cucumber-json:reports/report.json --reporter-app-name='My App' --reporter-app-version='x.y.z'
 ```
 
-And repeat
+## To generate the HTML report
+
+- install [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter) (version >= 1.10.0):
+
+  - `npm install --save-dev multiple-cucumber-html-reporter`
+
+- Create a `report-generator.js` file at the project root:
+
+```javascript
+const report = require('multiple-cucumber-html-reporter');
+const path = require('path');
+const projectName = path.basename(__dirname);
+const projectVersion = process.env.npm_package_version;
+const reportGenerationTime = new Date().toISOString();
+report.generate({
+  reportName: 'TestCafe Report',
+  jsonDir: 'reports',
+  reportPath: 'reports',
+  openReportInBrowser: true,
+  disableLog: true,
+  displayDuration: true,
+  durationInMS: true,
+  customData: {
+    title: 'Run info',
+    data: [
+      { label: 'Project', value: `${projectName}` },
+      { label: 'Release', value: `${projectVersion}` },
+      { label: 'Report Generation Time', value: `${reportGenerationTime}` },
+    ],
+  },
+});
+```
+
+- insert the following script in the `package.json` file:
+
+```javascript
+"report": "node report-generator.js",
+```
+
+- run the command `npm run report`
+
+## Tagging
+
+- Tags enables to filter the html report;
+- Tags are generated dynamically from the:
+  - fixture description
+  - test description
+  - fixture file name (TBD)
+  - fixture folder hierarchy (TBD)
+  - new t.meta() syntax (TBD)
+
+## Tags managment
+
+- Tags can be managed through the configuration file `testcafe-reporter-cucumber-json.json`
+  - this json file will be created on the first reporter run
+- To discard a tag, add this tag to the `noisyTags` section of the json configuration file.
+
+## Error rendering
+
+- this reporter will report multiple code frames, one for each file reported in the stacktrace
+
+```text
+1) The specified selector does not match any element in the DOM tree.
+
+   Browser: Firefox 59.0.0 / Mac OS X 10.12.0
+   Screenshot: /Users/HDO/VSCodeProjects/testcafe-starter/screenshots/2018-05-07_10-39-08/test-2/Firefox_59.0.0_Mac_OS_X_10.12.0/errors/1.png
+
+      13 |
+      14 |  const value = inputData.name || "";
+      15 |
+      16 |  await t
+      17 |    .setTestSpeed(config.testcafe.testSpeed)
+   --------------------------------------------
+    → 18 |    .hover(selector.userNameInputBox)
+   --------------------------------------------
+      19 |    .expect(selector.userNameInputBox.hasAttribute("disabled")).notOk()
+      20 |    .typeText(selector.userNameInputBox, value, {replace: true})
+      21 |    .pressKey("tab");
+      22 |};
+      23 |
+
+      at Object.(anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/domains/testcafe-sample-page/steps/i-enter-my-name.ts:18:6)
+      at (anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/domains/testcafe-sample-page/steps/i-enter-my-name.ts:7:71)
+      at __awaiter (/Users/HDO/VSCodeProjects/testcafe-starter/domains/testcafe-sample-page/steps/i-enter-my-name.ts:3:12)
+      at exports.default (/Users/HDO/VSCodeProjects/testcafe-starter/domains/testcafe-sample-page/steps/i-enter-my-name.ts:7:36)
+
+
+       6 |  if (canExecute === false) {
+       7 |    return;
+       8 |  }
+       9 |  const foundStep = stepMappings[stepName];
+      10 |  if (typeof foundStep === "function" ) {
+   --------------------------------------------
+    → 11 |    await foundStep(stepName);
+   --------------------------------------------
+      12 |    return;
+      13 |  }
+      14 |  throw new Error(`Step "${stepName}" is not mapped to an executable code.`);
+      15 |}
+      16 |export async function given(stepName: GivenStep) {
+
+      at (anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:11:11)
+      at (anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:7:71)
+      at __awaiter (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:3:12)
+      at executeStep (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:14:12)
+      at Object.(anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:20:9)
+      at (anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:7:71)
+      at __awaiter (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:3:12)
+      at Object.when (/Users/HDO/VSCodeProjects/testcafe-starter/step-runner.ts:34:12)
+
+
+      19 |  await  then("no name should be populated");
+      20 |  await   and("I cannot submit my feedback on testcafe");
+      21 |});
+      22 |
+      23 |test("Scenario: can send feedback with my name only", async () =) {
+   --------------------------------------------
+    → 24 |  await  when("I enter my name");
+   --------------------------------------------
+      25 |  await  then("I can submit my feedback on testcafe");
+      26 |});
+      27 |
+      28 |test("Scenario: send feedback", async () =) {
+      29 |  await env.only( "devci");
+
+      at Object.(anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/features/testcafe-sample-page.spec.ts:24:10)
+      at (anonymous) (/Users/HDO/VSCodeProjects/testcafe-starter/features/testcafe-sample-page.spec.ts:7:71)
+      at __awaiter (/Users/HDO/VSCodeProjects/testcafe-starter/features/testcafe-sample-page.spec.ts:3:12)
+      at test (/Users/HDO/VSCodeProjects/testcafe-starter/features/testcafe-sample-page.spec.ts:23:66)
 
 ```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Screenshot rendering
 
-## Running the tests
+- this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.
 
-Explain how to run the automated tests for this system
+## Contributors
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- [Tareq El-Masri](https://github.com/TareqElMasri)
+- [Tom Ardern](https://github.com/tomardern)
+- [Henri d'Orgeval](https://github.com/hdorgeval)
 
