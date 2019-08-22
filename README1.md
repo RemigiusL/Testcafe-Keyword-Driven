@@ -20,46 +20,84 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 testcafe chrome ./path-to-tests/*(.js)
 ```
 
-## To generate the HTML report
+## To execute the solution
 
-- install [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter) (version >= 1.10.0):
+- install [testcafe](https://devexpress.github.io/testcafe/documentation/getting-started/) (version >= ..):
 
-  - `npm install --save-dev multiple-cucumber-html-reporter`
+  - `npm install -g testcafe`
 
-- Create a `report-generator.js` file at the project root:
+- Create a `keyword-driven.js` file at the project root:
 
 ```javascript
-const report = require('multiple-cucumber-html-reporter');
-const path = require('path');
-const projectName = path.basename(__dirname);
-const projectVersion = process.env.npm_package_version;
-const reportGenerationTime = new Date().toISOString();
-report.generate({
-  reportName: 'TestCafe Report',
-  jsonDir: 'reports',
-  reportPath: 'reports',
-  openReportInBrowser: true,
-  disableLog: true,
-  displayDuration: true,
-  durationInMS: true,
-  customData: {
-    title: 'Run info',
-    data: [
-      { label: 'Project', value: `${projectName}` },
-      { label: 'Release', value: `${projectVersion}` },
-      { label: 'Report Generation Time', value: `${reportGenerationTime}` },
-    ],
-  },
+import { Selector } from 'testcafe';
+import XPath from './ComponentHelper/xpath-selector';
+
+fixture `Getting Started`
+.page `https://angelswelding.hms2go.no/`;
+
+var XLSX = require('xlsx')
+    var workbook = XLSX.readFile('Keyword - Copy.xlsx');
+    var sheet_name_list = workbook.SheetNames;
+    var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0,1,2,3,4,5,6]]);
+
+    test('Keyword-Driven',  async t => {
+        await t.maximizeWindow()
+        .pressKey('home right . ctrl + shift + J')
+        // xlData.forEach(element => {
+        for (let i = 0; i < xlData.length; i++) {
+            let element = xlData[i]
+            //[element.Keyword](element.Parameter)
+            switch (element.Keyword) {
+                case "navigateTo":
+                    await t[element.Keyword](element.Parameter)
+                    break;
+                case "click":
+                    await t[element.Keyword](XPath(element.LocatorValue))
+                    break;
+                case "typeText":
+                    await t[element.Keyword](XPath(element.LocatorValue), element.Parameter)
+                    break;
+                case "selectText":
+                    await t[element.Keyword](XPath(element.LocatorValue), element.Parameter)
+                    break;
+                default:
+                    return;
+            }
+            await t.setTestSpeed(0.1)
+        }
+    });
+    
+
+
+```
+
+- create the following script in the `xpath-selector.js` file:
+
+```javascript
+import { Selector } from 'testcafe';
+
+
+const elementByXPath = Selector(xpath => {
+    const iterator = document.evaluate(xpath, document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null )
+    const items = [];
+
+    let item = iterator.iterateNext();
+
+    while (item) {
+        items.push(item);
+        item = iterator.iterateNext();
+    }
+
+    return items;
 });
+
+export default function (xpath) {
+    return Selector(elementByXPath(xpath));
+}
+
 ```
 
-- insert the following script in the `package.json` file:
-
-```javascript
-"report": "node report-generator.js",
-```
-
-- run the command `npm run report`
+- run the command `testcafe chrome keyword-driven.js`
 
 ## Tagging
 
