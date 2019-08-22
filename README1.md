@@ -2,7 +2,7 @@
 
 This is the **Cucumber JSON** reporter plugin for [TestCafe](http://devexpress.github.io/testcafe).
 
-[![npm badge](https://miro.medium.com/max/1838/1*VjWsyasduivy_Hkr2LRq2A.png)](https://sites.google.com/site/testingbulletin/_/rsrc/1461315924116/selenium/selenium-frameworks/keyword-driven-framework/5%20column.png)
+[![npm badge](https://miro.medium.com/max/1838/1*VjWsyasduivy_Hkr2LRq2A.png)]()
 
 This TestCafe reporter generates a json file that can be converted to a nice and searchable html report by using [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter).
 
