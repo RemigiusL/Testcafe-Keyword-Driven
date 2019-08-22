@@ -48,7 +48,6 @@ var XLSX = require('xlsx')
 
     test('Keyword-Driven',  async t => {
         await t.maximizeWindow()
-        .pressKey('home right . ctrl + shift + J')
         for (let i = 0; i < xlData.length; i++) {
             let element = xlData[i]
             switch (element.Keyword) {
@@ -70,9 +69,6 @@ var XLSX = require('xlsx')
             await t.setTestSpeed(0.1)
         }
     });
-    
-
-
 ```
 
 - Create the following script in the `xpath-selector.js` file:
@@ -98,7 +94,6 @@ const elementByXPath = Selector(xpath => {
 export default function (xpath) {
     return Selector(elementByXPath(xpath));
 }
-
 ```
 
 - run the command `testcafe chrome keyword-driven.js`
