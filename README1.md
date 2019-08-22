@@ -101,8 +101,8 @@ export default function (xpath) {
 
 ## Tagging
 
-- Tags enables to filter the html report;
-- Tags are generated dynamically from the:
+- testcafe enables to execute the keyword-driven solution;
+- ```xlsx`` enables to read the excel file dynamically from the path:
   - fixture description
   - test description
   - fixture file name (TBD)
