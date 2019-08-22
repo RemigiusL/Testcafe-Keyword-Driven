@@ -24,7 +24,11 @@ testcafe chrome ./path-to-tests/*(.js)
 
 - install [testcafe](https://devexpress.github.io/testcafe/documentation/getting-started/) (version >= ..):
 
-  - `npm install -g testcafe`
+  - `npm i -g testcafe`
+  
+  - install [xlsx](https://www.npmjs.com/package/xlsx) (version >= 0.15.1):
+
+  - `npm i xlsx`
 
 - Create a `keyword-driven.js` file at the project root:
 
