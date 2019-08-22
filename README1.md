@@ -105,8 +105,8 @@ export default function (xpath) {
 
 ## Tagging
 
-- testcafe enables to execute the keyword-driven solution;
-- ```xlsx`` enables to read the excel file dynamically from the path:
+- `testcafe` enables to execute the keyword-driven solution;
+- `xlsx` enables to read the excel file dynamically from the path:
   - fixture description
   - test description
   - fixture file name (TBD)
