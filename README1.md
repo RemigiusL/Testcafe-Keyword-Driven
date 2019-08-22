@@ -4,7 +4,7 @@ This is the **Cucumber JSON** reporter plugin for [TestCafe](http://devexpress.g
 
 [![npm badge](https://miro.medium.com/max/1838/1*VjWsyasduivy_Hkr2LRq2A.png)]()
 
-This TestCafe reporter generates a json file that can be converted to a nice and searchable html report by using [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter).
+Testcafe [Keyword Driven Framework] is a type of Functional Automation Testing Framework which is also known as Table-Driven testing or Action Word based testing. (https://github.com/wswebcreation/multiple-cucumber-html-reporter).
 
 ![report-sample](https://larion.com/wp-content/uploads/2017/04/Keyword-Driven-Framework-Testing.jpg)
 
