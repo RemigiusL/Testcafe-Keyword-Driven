@@ -6,7 +6,7 @@ This is the **Keyword-Driven** framework plugin for [TestCafe](http://devexpress
 
 Testcafe Keyword Driven Framework is a type of Functional Automation Testing Framework which is also known as Table-Driven testing or Action Word based testing.
 
-![report-sample](https://larion.com/wp-content/uploads/2017/04/Keyword-Driven-Framework-Testing.jpg)
+![report-sample](https://i.stack.imgur.com/BcNY0.jpg)
 
 ## To install this TestCafe Keyword-Driven
 
