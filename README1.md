@@ -196,9 +196,18 @@ export default function (xpath) {
 
 - this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.
 
+## Video rendering
+
+- this video embeds all actions as .mp4, making the generated .mp4 file completely autonomous.
+
 ## Logger rendering
 
 - this logger embeds all information about the execution as a html report, making the generated html file completely autonomous.
+
+## Mail rendering
+
+- this making the emailable logger file completely autonomous.
+
 
 ## Contributors
 
