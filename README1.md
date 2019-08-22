@@ -106,17 +106,10 @@ export default function (xpath) {
 - `testcafe` enables to execute the keyword-driven solution;
 - `xlsx` enables to read the excel file with data dynamically from the path:
 - `xpath-selector.js` enables to access the xpath
- 
-
-## Tags managment
-
-- Tags can be managed through the configuration file `testcafe-reporter-cucumber-json.json`
-  - this json file will be created on the first reporter run
-- To discard a tag, add this tag to the `noisyTags` section of the json configuration file.
 
 ## Error rendering
 
-- this reporter will report multiple code frames, one for each file reported in the stacktrace
+- this execution will report for each file reported in the stack trace
 
 ```
 C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
