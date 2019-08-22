@@ -39,7 +39,7 @@ import { Selector } from 'testcafe';
 import XPath from './ComponentHelper/xpath-selector';
 
 fixture `Getting Started`
-.page `https://angelswelding.hms2go.no/`;
+.page `https://facebook.com`;
 
 var XLSX = require('xlsx')
     var workbook = XLSX.readFile('Keyword - Copy.xlsx');
