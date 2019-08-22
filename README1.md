@@ -8,7 +8,7 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 
 ![report-sample](https://larion.com/wp-content/uploads/2017/04/Keyword-Driven-Framework-Testing.jpg)
 
-## To install this TestCafe Reporter
+## To install this TestCafe Keyword-Driven
 
 - run the command `npm i keyword_driven`.
 
@@ -101,15 +101,12 @@ export default function (xpath) {
 
 - run the command `testcafe chrome keyword-driven.js`
 
-## Tagging
+## Utility
 
 - `testcafe` enables to execute the keyword-driven solution;
 - `xlsx` enables to read the excel file with data dynamically from the path:
-  - fixture description
-  - test description
-  - fixture file name (TBD)
-  - fixture folder hierarchy (TBD)
-  - new t.meta() syntax (TBD)
+- `xpath-selector.js` enables to access the xpath
+ 
 
 ## Tags managment
 
@@ -211,7 +208,6 @@ export default function (xpath) {
 
 ## Contributors
 
-- [Tareq El-Masri](https://github.com/TareqElMasri)
-- [Tom Ardern](https://github.com/tomardern)
-- [Henri d'Orgeval](https://github.com/hdorgeval)
+- [RemigiusLourdusamy](https://github.com/RemigiusL/)
+
 
