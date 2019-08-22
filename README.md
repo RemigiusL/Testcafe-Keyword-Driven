@@ -22,6 +22,10 @@ testcafe chrome ./path-to-tests/*(.js)
 
 ## To execute the solution
 
+  ## Prerequisites
+
+    - Ensure that Node.js and npm are installed on your computer and run the following command:.
+
 - install [testcafe](https://devexpress.github.io/testcafe/documentation/getting-started/) (version >= ..):
 
   - `npm i -g testcafe`
