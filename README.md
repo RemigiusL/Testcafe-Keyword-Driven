@@ -26,7 +26,7 @@ testcafe chrome ./path-to-tests/*(.js)
 
   - `npm i -g testcafe`
   
-  - install [xlsx](https://www.npmjs.com/package/xlsx) (version >= 0.15.1):
+- install [xlsx](https://www.npmjs.com/package/xlsx) (version >= 0.15.1):
 
   - `npm i xlsx`
 
