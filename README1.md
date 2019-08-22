@@ -1,10 +1,10 @@
 # Keyword-Driven using TestCafe (beta)
 
-This is the **Cucumber JSON** reporter plugin for [TestCafe](http://devexpress.github.io/testcafe).
+This is the **Keyword-Driven** framework plugin for [TestCafe](http://devexpress.github.io/testcafe).
 
 [![npm badge](https://miro.medium.com/max/1838/1*VjWsyasduivy_Hkr2LRq2A.png)]()
 
-Testcafe [Keyword Driven Framework] is a type of Functional Automation Testing Framework which is also known as Table-Driven testing or Action Word based testing. (https://github.com/wswebcreation/multiple-cucumber-html-reporter).
+Testcafe Keyword Driven Framework is a type of Functional Automation Testing Framework which is also known as Table-Driven testing or Action Word based testing.
 
 ![report-sample](https://larion.com/wp-content/uploads/2017/04/Keyword-Driven-Framework-Testing.jpg)
 
