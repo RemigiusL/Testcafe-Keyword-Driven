@@ -104,7 +104,7 @@ export default function (xpath) {
 ## Utility
 
 - `testcafe` enables to execute the keyword-Driven solution.
-- `xlsx` enables to read the excel file with data dynamically from the ./path-to-tests/*(.xlsx).
+- `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
 - `xpath-selector.js` enables to access the xpath(LocatorValue).
 
 ## Error rendering
