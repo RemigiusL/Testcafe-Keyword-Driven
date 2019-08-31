@@ -24,7 +24,7 @@ testcafe chrome ./path-to-tests/*(.js)
 
        - Ensure that Node.js and npm are installed on your computer and run the following command:.
 
-- install [testcafe](https://devexpress.github.io/testcafe/documentation/getting-started/) (version >= ..):
+- install [testcafe](https://devexpress.github.io/testcafe/documentation/getting-started/) (version >= 1.4.1):
 
   - `npm i -g testcafe`
   
@@ -44,7 +44,7 @@ fixture `Getting Started`
 var XLSX = require('xlsx')
     var workbook = XLSX.readFile('Keyword - Copy.xlsx');
     var sheet_name_list = workbook.SheetNames;
-    var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0,1,2,3,4,5,6]]);
+    var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 
     test('Keyword-Driven',  async t => {
         await t.maximizeWindow()
