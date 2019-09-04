@@ -8,19 +8,19 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 
 ![report-sample](https://sites.google.com/site/testingbulletin/_/rsrc/1461315924116/selenium/selenium-frameworks/keyword-driven-framework/5%20column.png)
 
-## installation
+## To install this TestCafe Keyword-Driven Framework
 
 - run the command `npm i keyword_driven`.
 
 ## Usage
 
-- add to the testcafe command-line the following option to run the script:
+- add to the testcafe command-line the following options:
 
 ```sh
 testcafe chrome ./path-to-tests/*(.js)
 ```
 
-## execution
+## To execute the solution
 
        - Ensure that Node.js and npm are installed on your computer and run the following command:.
 
@@ -39,7 +39,7 @@ import { Selector } from 'testcafe';
 import XPath from './ComponentHelper/xpath-selector';
 
 fixture `Getting Started`
-.page `https://devexpress.github.io/testcafe/documentation/getting-started/`;
+.page `https://facebook.com`;
 
 var XLSX = require('xlsx')
     var workbook = XLSX.readFile('./path-to-read/*(.xlsx)');
@@ -98,14 +98,18 @@ export default function (xpath) {
 
 - run the command `testcafe chrome keyword-driven.js`
 
+## Utility
 
+- `testcafe` enables to execute the keyword-Driven solution.
+- `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
+- `xpath-selector.js` enables to access the xpath(LocatorValue).
 
 ## Error rendering
 
 - this execution will report for each file reported in the stack trace.
 
 ```
-C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome ./path-to-tests/*(.js)
+C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
  Running tests in:
  - Chrome 76.0.3809 / Windows 10.0.0
 
@@ -151,13 +155,6 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome ./path-to-tests/*
 ## Mail rendering
 
 - this making the emailable logger file completely autonomous.
-
-## Utility
-
-- `testcafe` enables to execute the keyword-Driven solution.
-- `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
-- `xpath-selector.js` enables to access the xpath(LocatorValue).
-- `log4js` enables to access the loggerAppender [log4js](https://www.npmjs.com/package/log4js) (version >= 5.1.0):
 
 
 ## Contributors
