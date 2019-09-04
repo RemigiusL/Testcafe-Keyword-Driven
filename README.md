@@ -39,7 +39,7 @@ import { Selector } from 'testcafe';
 import XPath from './ComponentHelper/xpath-selector';
 
 fixture `Getting Started`
-.page `https://facebook.com`;
+.page `https://devexpress.github.io/testcafe/documentation/getting-started/`;
 
 var XLSX = require('xlsx')
     var workbook = XLSX.readFile('./path-to-read/*(.xlsx)');
