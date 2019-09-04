@@ -103,6 +103,7 @@ export default function (xpath) {
 - `testcafe` enables to execute the keyword-Driven solution.
 - `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
 - `xpath-selector.js` enables to access the xpath(LocatorValue).
+- `[log4js]`(https://www.npmjs.com/package/log4js) (version >= 5.1.0):
 
 ## Error rendering
 
@@ -142,7 +143,7 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome ./path-to-tests/*
 
 ## Screenshot rendering
 
-- this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.`install [log4js](https://www.npmjs.com/package/log4js) (version >= 5.1.0):`
+- this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.
 
 ## Video rendering
 
