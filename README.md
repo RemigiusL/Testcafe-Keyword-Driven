@@ -157,7 +157,7 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
 - `testcafe` enables to execute the keyword-Driven solution.
 - `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
 - `xpath-selector.js` enables to access the xpath(LocatorValue).
-- `[log4js]` (https://www.npmjs.com/package/log4js)  used to log messages for a specific test.
+- `log4js` (https://www.npmjs.com/package/log4js)  used to [log] messages for a specific test.
 
 ## Contributors
 
