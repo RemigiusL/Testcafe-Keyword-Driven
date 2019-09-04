@@ -8,9 +8,11 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 
 ![report-sample](https://sites.google.com/site/testingbulletin/_/rsrc/1461315924116/selenium/selenium-frameworks/keyword-driven-framework/5%20column.png)
 
-## Getting help 
+## To install this TestCafe Keyword-Driven Framework
 
 - run the command `npm i keyword_driven`.
+
+## Usage
 
 - add to the testcafe command-line the following options:
 
@@ -18,11 +20,11 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 testcafe chrome ./path-to-tests/*(.js)
 ```
 
-## Usage
+## To execute the solution
 
        - Ensure that Node.js and npm are installed on your computer and run the following command:.
 
-- install [testcafe](https://devexpress.github.io/testcafe/documentation/getting-started/) (version >= 1.4.1):
+- install [testcafe](https://devexpress.github.io/testcafe/documentation/getting-started/) (version >=1.4.1):
 
   - `npm i -g testcafe`
   
@@ -101,7 +103,6 @@ export default function (xpath) {
 - `testcafe` enables to execute the keyword-Driven solution.
 - `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
 - `xpath-selector.js` enables to access the xpath(LocatorValue).
-- `[log4js]`(https://www.npmjs.com/package/log4js) (version >= 5.1.0):
 
 ## Error rendering
 
@@ -149,7 +150,7 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome ./path-to-tests/*
 
 ## Logger rendering
 
-- this logger embeds all information about the execution as a html report, making the generated html file completely autonomous.
+- this logger embeds all information about the execution as a html report, making the generated html file completely autonomous with suite of logs, Screenshots, .mp4.
 
 ## Mail rendering
 
