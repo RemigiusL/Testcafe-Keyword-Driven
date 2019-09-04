@@ -20,7 +20,7 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 testcafe chrome ./path-to-tests/*(.js)
 ```
 
-## To execute the solution
+## execution
 
        - Ensure that Node.js and npm are installed on your computer and run the following command:.
 
@@ -98,11 +98,7 @@ export default function (xpath) {
 
 - run the command `testcafe chrome keyword-driven.js`
 
-## Utility
 
-- `testcafe` enables to execute the keyword-Driven solution.
-- `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
-- `xpath-selector.js` enables to access the xpath(LocatorValue).
 
 ## Error rendering
 
@@ -155,6 +151,12 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome ./path-to-tests/*
 ## Mail rendering
 
 - this making the emailable logger file completely autonomous.
+
+## Utility
+
+- `testcafe` enables to execute the keyword-Driven solution.
+- `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
+- `xpath-selector.js` enables to access the xpath(LocatorValue).
 
 
 ## Contributors
