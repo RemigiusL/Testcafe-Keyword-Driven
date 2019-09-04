@@ -39,7 +39,7 @@ import { Selector } from 'testcafe';
 import XPath from './ComponentHelper/xpath-selector';
 
 fixture `Getting Started`
-.page `https://facebook.com`;
+.page `https://devexpress.github.io/testcafe/documentation/getting-started/`;
 
 var XLSX = require('xlsx')
     var workbook = XLSX.readFile('./path-to-read/*(.xlsx)');
@@ -71,7 +71,7 @@ var XLSX = require('xlsx')
     });
 ```
 
-- Create the following script in the `xpath-selector.js` file:
+- Create the following script in the `xpath-selector.js` file for handling `XPath`:
 
 ```javascript
 import { Selector } from 'testcafe';
@@ -138,30 +138,24 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
 
 ## Screenshot rendering
 
-- this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.
+- `Windows: .NET 4.0 (OR) Linux: ICCCM/EWMH-compliant window manager ` reporter embeds all screenshots as base 64 images, making the generated image file completely autonomous.
 
 ## Video rendering
 
-- this video embeds all actions as .mp4, making the generated .mp4 file completely autonomous.
+- ` FFmpeg library` video embeds all actions as .mp4, making the generated .mp4 file completely autonomous.
 
 ## Logger rendering
 
-- this logger embeds all information about the execution as a html report, making the generated html file completely autonomous with suite of logs, Screenshots, .mp4.
+- `log4js` logger embeds all information about the execution as a report, making the generated log file completely autonomous with suite of logs, Screenshots, .mp4.
 
-## Mail rendering
+## Slack notifier
 
-- this making the emailable logger file completely autonomous.
+- `Slack Appender for log4js-node` Sends log events to a [slack](https://slack.com) channel. This is completely autonomous with [log4js](https://log4js-node.github.io/log4js-node/). 
 
 ## Utility
 
-- `testcafe` enables to execute the keyword-Driven solution.
-- `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
-- `xpath-selector.js` enables to access the xpath(LocatorValue).
-- `log4js` used to [log](https://www.npmjs.com/package/log4js) messages for a specific test.
-- `Slack Appender for log4js-node` Sends log events to a [slack](https://slack.com) channel. This is an optional appender for use with [log4js](https://log4js-node.github.io/log4js-node/).[https://imageog.flaticon.com/icons/png/512/25/25284.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF](https://api.slack.com/methods/files.upload)
+- 
 
 ## Contributors
 
 - [RemigiusLourdusamy](https://github.com/RemigiusL/)
-
-
