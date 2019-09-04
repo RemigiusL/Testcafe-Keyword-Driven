@@ -14,7 +14,7 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 
 ## Usage
 
-- add to the testcafe command-line the following options:
+- add to the testcafe command-line the following option to run the script:
 
 ```sh
 testcafe chrome ./path-to-tests/*(.js)
