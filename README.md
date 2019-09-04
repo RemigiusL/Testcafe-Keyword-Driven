@@ -8,11 +8,9 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 
 ![report-sample](https://sites.google.com/site/testingbulletin/_/rsrc/1461315924116/selenium/selenium-frameworks/keyword-driven-framework/5%20column.png)
 
-## To install this TestCafe Keyword-Driven Framework
+## Getting help 
 
 - run the command `npm i keyword_driven`.
-
-## Usage
 
 - add to the testcafe command-line the following options:
 
@@ -20,7 +18,7 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 testcafe chrome ./path-to-tests/*(.js)
 ```
 
-## To execute the solution
+## Usage
 
        - Ensure that Node.js and npm are installed on your computer and run the following command:.
 
