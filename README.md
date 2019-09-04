@@ -138,19 +138,23 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
 
 ## Screenshot rendering
 
-- `Windows: .NET 4.0 (OR) Linux: ICCCM/EWMH-compliant window manager ` reporter embeds all screenshots as base 64 images, making the generated image file completely autonomous.
+- `Windows: .NET 4.0 (OR) Linux: ICCCM/EWMH-compliant window manager ` 
+    - reporter embeds all screenshots as base 64 images, making the generated image file completely autonomous.
 
 ## Video rendering
 
-- ` FFmpeg library` video embeds all actions as .mp4, making the generated .mp4 file completely autonomous.
+- ` FFmpeg library` 
+    - video embeds all actions as .mp4, making the generated .mp4 file completely autonomous.
 
 ## Logger rendering
 
-- `log4js` logger embeds all information about the execution as a report, making the generated log file completely autonomous with suite of logs, Screenshots, .mp4.
+- `log4js` 
+    - logger embeds all information about the execution as a report, making the generated log file completely autonomous with suite of logs, Screenshots, .mp4.
 
 ## Slack notifier
 
-- `Slack Appender for log4js-node` Sends log events to a [slack](https://slack.com) channel. This is completely autonomous with [log4js](https://log4js-node.github.io/log4js-node/). 
+- `Slack Appender for log4js-node` 
+    - Sends log events to a [slack](https://slack.com) channel. This is completely autonomous with [log4js](https://log4js-node.github.io/log4js-node/). 
 
 ## Utility
 
