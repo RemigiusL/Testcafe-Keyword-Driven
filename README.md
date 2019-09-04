@@ -158,7 +158,7 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
 - `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
 - `xpath-selector.js` enables to access the xpath(LocatorValue).
 - `log4js` used to [log](https://www.npmjs.com/package/log4js) messages for a specific test.
-- `Slack Appender for log4js-node` Sends log events to a [slack](https://slack.com) channel. This is an optional appender for use with [log4js](https://log4js-node.github.io/log4js-node/).[Document]https://api.slack.com/methods/files.upload
+- `Slack Appender for log4js-node` Sends log events to a [slack](https://slack.com) channel. This is an optional appender for use with [log4js](https://log4js-node.github.io/log4js-node/).[Document](https://api.slack.com/methods/files.upload
 )
 
 ## Contributors
