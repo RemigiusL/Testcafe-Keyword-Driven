@@ -8,7 +8,7 @@ Testcafe Keyword Driven Framework is a type of Functional Automation Testing Fra
 
 ![report-sample](https://sites.google.com/site/testingbulletin/_/rsrc/1461315924116/selenium/selenium-frameworks/keyword-driven-framework/5%20column.png)
 
-## To install this TestCafe Keyword-Driven Framework
+## installation
 
 - run the command `npm i keyword_driven`.
 
