@@ -142,7 +142,7 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome ./path-to-tests/*
 
 ## Screenshot rendering
 
-- this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.
+- this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.`install [log4js](https://www.npmjs.com/package/log4js) (version >= 5.1.0):`
 
 ## Video rendering
 
