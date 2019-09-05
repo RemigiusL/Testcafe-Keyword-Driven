@@ -154,7 +154,7 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
 ## Slack notifier
 
 - `Slack Appender for log4js-node` 
-    - Sends log events to a [slack](https://slack.com) channel. This is completely autonomous with [log4js](https://log4js-node.github.io/log4js-node/). 
+    - Sends log events to a [slack](https://slack.com) channel. This is completely autonomous with [For more details](https://api.slack.com/methods/files.upload). 
 
 ## Utility
 
