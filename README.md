@@ -138,27 +138,26 @@ C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
 
 ## Screenshot rendering
 
-- `Windows: .NET 4.0 (OR) Linux: ICCCM/EWMH-compliant window manager ` 
-    - reporter embeds all screenshots as base 64 images, making the generated image file completely autonomous.
+- this reporter embeds all screenshots as base 64 images, making the generated json file completely autonomous.
 
 ## Video rendering
 
-- ` FFmpeg library` 
-    - video embeds all actions as .mp4, making the generated .mp4 file completely autonomous.
+- this video embeds all actions as .mp4, making the generated .mp4 file completely autonomous.
 
 ## Logger rendering
 
-- `log4js` 
-    - logger embeds all information about the execution as a report, making the generated log file completely autonomous with suite of logs, Screenshots, .mp4.
+- this logger embeds all information about the execution as a html report, making the generated html file completely autonomous with suite of logs, Screenshots, .mp4.
 
-## Slack notifier
+## Mail rendering
 
-- `Slack Appender for log4js-node` 
-    - Sends log events to a [slack](https://slack.com) channel. This is completely autonomous with [For more details](https://api.slack.com/methods/files.upload). 
+- this making the emailable logger file completely autonomous.
 
 ## Utility
 
-- 
+- `testcafe` enables to execute the keyword-Driven solution.
+- `xlsx` enables to read the excel file with data dynamically from the ./path-to-read/*(.xlsx).
+- `xpath-selector.js` enables to access the xpath(LocatorValue).
+- `log4js` used to [log](https://www.npmjs.com/package/log4js) messages for a specific test.[For more details please refer](https://api.slack.com/methods/files.upload). 
 
 ## Contributors
 
