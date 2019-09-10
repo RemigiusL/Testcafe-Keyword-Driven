@@ -105,7 +105,7 @@ export default function (xpath) {
 - this execution will report for each file reported in the stack trace.
 
 ```
-C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome Keyword-Driven.js
+C:\ProcessDrive\TestCafe\Trails\Keyword_Driven>testcafe chrome ./path-to-run/*(.js)
  Running tests in:
  - Chrome 76.0.3809 / Windows 10.0.0
 
