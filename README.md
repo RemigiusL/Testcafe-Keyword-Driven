@@ -1,6 +1,6 @@
 # Keyword-Driven using [TestCafe](http://devexpress.github.io/testcafe) (beta)
 
-This is the **Keyword-Driven** framework plugin for [TestCafe](http://devexpress.github.io/testcafe).
+This is the **Keyword-Driven** framework plugin for TestCafe.
 
 [![npm badge](https://docs.devexpress.com/TestCafeStudio/images/guides/wait-for-page-to-load.gif)]()
 
